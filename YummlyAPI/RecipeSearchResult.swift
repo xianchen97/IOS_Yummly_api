@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+
+
+struct RecipeSearchResult: Decodable{
+    var matches: [Match]
+}

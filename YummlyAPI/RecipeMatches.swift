@@ -1,9 +1,22 @@
-//
-//  RecipeMatches.swift
-//  YummlyAPI
-//
-//  Created by Xian Chen Ruan on 2018-11-23.
-//  Copyright © 2018 Xian Chen Ruan. All rights reserved.
-//
 
-import Foundation
+import UIKit
+
+
+//Object to store recipes
+class RecipeMatches {
+    var recipeSearches = RecipeSearchResult(matches: [])
+    
+    init(recipeSearches: RecipeSearchResult) {
+        self.recipeSearches = recipeSearches
+    }
+    
+    init(){
+        
+    }
+    
+    var searchResults: [Match] {
+        get {
+            return recipeSearches.matches
+        }
+    }
+}

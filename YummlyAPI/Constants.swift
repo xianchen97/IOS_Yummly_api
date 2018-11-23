@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct Constants{
+    static let APP_ID = "e4c761db"
+    static let APP_KEY = "e7154b6259264e56f14aa02cbea34125"
+}

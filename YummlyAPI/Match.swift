@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+struct Match: Decodable{
+    let id: String?
+    let recipeName: String?
+    let imageUrlsBySize: [String: URL?]
+    let sourceDisplayName: String?
+}
+
