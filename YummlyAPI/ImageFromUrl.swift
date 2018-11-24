@@ -11,7 +11,6 @@ import UIKit
 class ImageFromUrl {
     func getDetailImage(url: URL) -> UIImage {
         let newUrl = useHttps(url: url)
-        
         if let imageData = try? Data(contentsOf: newUrl) {
             return UIImage(data: imageData)!
         }

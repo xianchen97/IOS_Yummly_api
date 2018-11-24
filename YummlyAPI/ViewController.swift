@@ -23,25 +23,34 @@ class ViewController: UIViewController, URLSessionDelegate, UITableViewDelegate,
         super.viewDidLoad()
         setUpSearchBar()
         getRecipeSearchResults(with: "apple");
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
+    
+    //Return the amount of items that matched the search parameters
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(results.searchResults.count)
         return results.searchResults.count
         
     }
     
+    //Proceed to details view when an item is clicked
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "details", sender: results.searchResults[indexPath.row].id)
+
+    }
+    
+    //Search recipes with query when submitted
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         getRecipeSearchResults(with: searchBar.text!)
 
     }
     
+    //Set up table view with values retrieved
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         let matches = results.searchResults[indexPath.row].imageUrlsBySize
         let url = matches.first?.value
         cell.imageView?.image = ImageFromUrl().getDetailImage(url: url!)
+        cell.textLabel?.text = results.searchResults[indexPath.row].recipeName
         return cell
     }
     
@@ -50,14 +59,12 @@ class ViewController: UIViewController, URLSessionDelegate, UITableViewDelegate,
     }
     
     
-    //Function to get recipes capped at 30S
     func getRecipeSearchResults(with searchPhrase: String) {
         
+        //Format query to call API
         let formattedSearchPhrase = searchPhrase.replacingOccurrences(of: " ", with: "+")
         
-        //INCREASE RESULTS &maxResult=20
         let searchUrl = "https://api.yummly.com/v1/api/recipes?_app_id=\(Constants.APP_ID)&_app_key=\(Constants.APP_KEY)&q=\(formattedSearchPhrase)&requirePictures=true&maxResult=30"
-        print("SEARCH URL: \(searchUrl)")
         
         guard let request = URL(string: searchUrl) else { return }
         
@@ -66,11 +73,8 @@ class ViewController: UIViewController, URLSessionDelegate, UITableViewDelegate,
             guard let data = data else { return }
             do {
                 let searchResult = try JSONDecoder().decode(RecipeSearchResult.self, from: data)
-                print("SEARCH RESULT: \(searchResult.matches.count)")
-                print(type(of: searchResult))
                 let result = RecipeMatches(recipeSearches: searchResult)
                 self.results = result
-                print("SEARCH RESULTS FDSFDSFSD: \(self.results.searchResults.count)")
                 self.RecipeTable.reloadData()
 
             }  catch let jsonError {
@@ -81,4 +85,6 @@ class ViewController: UIViewController, URLSessionDelegate, UITableViewDelegate,
         
     }
 }
+
+
 

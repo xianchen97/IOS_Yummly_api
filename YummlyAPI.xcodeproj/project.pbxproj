@@ -18,6 +18,7 @@
 		3854ACD021A88E410065D3E7 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854ACCF21A88E410065D3E7 /* Match.swift */; };
 		3854ACD621A8AEB00065D3E7 /* RecipeMatches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854ACD521A8AEB00065D3E7 /* RecipeMatches.swift */; };
 		3854ACD921A8B3580065D3E7 /* ImageFromUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854ACD821A8B3580065D3E7 /* ImageFromUrl.swift */; };
+		38899A2C21A8C5D100B67CB5 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38899A2B21A8C5D100B67CB5 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		3854ACCF21A88E410065D3E7 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		3854ACD521A8AEB00065D3E7 /* RecipeMatches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeMatches.swift; sourceTree = "<group>"; };
 		3854ACD821A8B3580065D3E7 /* ImageFromUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFromUrl.swift; sourceTree = "<group>"; };
+		38899A2B21A8C5D100B67CB5 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +68,9 @@
 		3854ACB521A88C8A0065D3E7 /* YummlyAPI */ = {
 			isa = PBXGroup;
 			children = (
+				38899A2A21A8C4DA00B67CB5 /* Detail_Model */,
 				3854ACB621A88C8A0065D3E7 /* AppDelegate.swift */,
+				38899A2B21A8C5D100B67CB5 /* DetailsViewController.swift */,
 				3854ACB821A88C8A0065D3E7 /* ViewController.swift */,
 				3854ACBA21A88C8A0065D3E7 /* Main.storyboard */,
 				3854ACC021A88C8B0065D3E7 /* Assets.xcassets */,
@@ -80,6 +84,13 @@
 				3854ACD821A8B3580065D3E7 /* ImageFromUrl.swift */,
 			);
 			path = YummlyAPI;
+			sourceTree = "<group>";
+		};
+		38899A2A21A8C4DA00B67CB5 /* Detail_Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail_Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 			files = (
 				3854ACBF21A88C8A0065D3E7 /* YummlyAPI.xcdatamodeld in Sources */,
 				3854ACD621A8AEB00065D3E7 /* RecipeMatches.swift in Sources */,
+				38899A2C21A8C5D100B67CB5 /* DetailsViewController.swift in Sources */,
 				3854ACB921A88C8A0065D3E7 /* ViewController.swift in Sources */,
 				3854ACCE21A88D530065D3E7 /* RecipeSearchResult.swift in Sources */,
 				3854ACB721A88C8A0065D3E7 /* AppDelegate.swift in Sources */,
