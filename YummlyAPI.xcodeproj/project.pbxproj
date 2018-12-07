@@ -19,6 +19,13 @@
 		3854ACD621A8AEB00065D3E7 /* RecipeMatches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854ACD521A8AEB00065D3E7 /* RecipeMatches.swift */; };
 		3854ACD921A8B3580065D3E7 /* ImageFromUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854ACD821A8B3580065D3E7 /* ImageFromUrl.swift */; };
 		38899A2C21A8C5D100B67CB5 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38899A2B21A8C5D100B67CB5 /* DetailsViewController.swift */; };
+		90D40BAF21BA3E95003E3D51 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D40BAE21BA3E95003E3D51 /* RecipeDetail.swift */; };
+		90D40BB121BA3EE3003E3D51 /* RecipeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D40BB021BA3EE3003E3D51 /* RecipeImage.swift */; };
+		90D40BB521BA3F2F003E3D51 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D40BB421BA3F2F003E3D51 /* Source.swift */; };
+		90D40BB721BA4F68003E3D51 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D40BB621BA4F68003E3D51 /* Details.swift */; };
+		90D40BBE21BAB5E0003E3D51 /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D40BBD21BAB5E0003E3D51 /* IngredientsViewController.swift */; };
+		90D40BC021BAC233003E3D51 /* IngredientBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D40BBF21BAC233003E3D51 /* IngredientBundle.swift */; };
+		90D40C0021BAC8D6003E3D51 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90D40BFE21BAC8D6003E3D51 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +43,13 @@
 		3854ACD521A8AEB00065D3E7 /* RecipeMatches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeMatches.swift; sourceTree = "<group>"; };
 		3854ACD821A8B3580065D3E7 /* ImageFromUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFromUrl.swift; sourceTree = "<group>"; };
 		38899A2B21A8C5D100B67CB5 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		90D40BAE21BA3E95003E3D51 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
+		90D40BB021BA3EE3003E3D51 /* RecipeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeImage.swift; sourceTree = "<group>"; };
+		90D40BB421BA3F2F003E3D51 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Source.swift; path = YummlyAPI/Source.swift; sourceTree = SOURCE_ROOT; };
+		90D40BB621BA4F68003E3D51 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Details.swift; path = YummlyAPI/Details.swift; sourceTree = SOURCE_ROOT; };
+		90D40BBD21BAB5E0003E3D51 /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
+		90D40BBF21BAC233003E3D51 /* IngredientBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IngredientBundle.swift; path = YummlyAPI/IngredientBundle.swift; sourceTree = SOURCE_ROOT; };
+		90D40BFF21BAC8D6003E3D51 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +84,13 @@
 			children = (
 				38899A2A21A8C4DA00B67CB5 /* Detail_Model */,
 				3854ACB621A88C8A0065D3E7 /* AppDelegate.swift */,
+				90D40BBF21BAC233003E3D51 /* IngredientBundle.swift */,
 				38899A2B21A8C5D100B67CB5 /* DetailsViewController.swift */,
+				90D40BBD21BAB5E0003E3D51 /* IngredientsViewController.swift */,
+				3854ACD521A8AEB00065D3E7 /* RecipeMatches.swift */,
 				3854ACB821A88C8A0065D3E7 /* ViewController.swift */,
+				90D40BB621BA4F68003E3D51 /* Details.swift */,
+				90D40BAE21BA3E95003E3D51 /* RecipeDetail.swift */,
 				3854ACBA21A88C8A0065D3E7 /* Main.storyboard */,
 				3854ACC021A88C8B0065D3E7 /* Assets.xcassets */,
 				3854ACC221A88C8B0065D3E7 /* LaunchScreen.storyboard */,
@@ -79,9 +98,10 @@
 				3854ACBD21A88C8A0065D3E7 /* YummlyAPI.xcdatamodeld */,
 				3854ACCB21A88CCD0065D3E7 /* Constants.swift */,
 				3854ACCD21A88D530065D3E7 /* RecipeSearchResult.swift */,
-				3854ACCF21A88E410065D3E7 /* Match.swift */,
-				3854ACD521A8AEB00065D3E7 /* RecipeMatches.swift */,
 				3854ACD821A8B3580065D3E7 /* ImageFromUrl.swift */,
+				3854ACCF21A88E410065D3E7 /* Match.swift */,
+				90D40BB021BA3EE3003E3D51 /* RecipeImage.swift */,
+				90D40BFE21BAC8D6003E3D51 /* Model.xcdatamodeld */,
 			);
 			path = YummlyAPI;
 			sourceTree = "<group>";
@@ -89,6 +109,7 @@
 		38899A2A21A8C4DA00B67CB5 /* Detail_Model */ = {
 			isa = PBXGroup;
 			children = (
+				90D40BB421BA3F2F003E3D51 /* Source.swift */,
 			);
 			path = Detail_Model;
 			sourceTree = "<group>";
@@ -125,6 +146,7 @@
 				TargetAttributes = {
 					3854ACB221A88C8A0065D3E7 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -166,13 +188,20 @@
 			files = (
 				3854ACBF21A88C8A0065D3E7 /* YummlyAPI.xcdatamodeld in Sources */,
 				3854ACD621A8AEB00065D3E7 /* RecipeMatches.swift in Sources */,
+				90D40BB121BA3EE3003E3D51 /* RecipeImage.swift in Sources */,
+				90D40BAF21BA3E95003E3D51 /* RecipeDetail.swift in Sources */,
 				38899A2C21A8C5D100B67CB5 /* DetailsViewController.swift in Sources */,
 				3854ACB921A88C8A0065D3E7 /* ViewController.swift in Sources */,
+				90D40BC021BAC233003E3D51 /* IngredientBundle.swift in Sources */,
+				90D40BB721BA4F68003E3D51 /* Details.swift in Sources */,
 				3854ACCE21A88D530065D3E7 /* RecipeSearchResult.swift in Sources */,
 				3854ACB721A88C8A0065D3E7 /* AppDelegate.swift in Sources */,
 				3854ACCC21A88CCD0065D3E7 /* Constants.swift in Sources */,
+				90D40C0021BAC8D6003E3D51 /* Model.xcdatamodeld in Sources */,
 				3854ACD021A88E410065D3E7 /* Match.swift in Sources */,
+				90D40BBE21BAB5E0003E3D51 /* IngredientsViewController.swift in Sources */,
 				3854ACD921A8B3580065D3E7 /* ImageFromUrl.swift in Sources */,
+				90D40BB521BA3F2F003E3D51 /* Source.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,15 +347,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N6RP3H788Z;
 				INFOPLIST_FILE = YummlyAPI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xian.YummlyAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -336,9 +368,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N6RP3H788Z;
 				INFOPLIST_FILE = YummlyAPI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,6 +415,16 @@
 			);
 			currentVersion = 3854ACBE21A88C8A0065D3E7 /* YummlyAPI.xcdatamodel */;
 			path = YummlyAPI.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		90D40BFE21BAC8D6003E3D51 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				90D40BFF21BAC8D6003E3D51 /* Model.xcdatamodel */,
+			);
+			currentVersion = 90D40BFF21BAC8D6003E3D51 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

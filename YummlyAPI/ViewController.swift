@@ -12,6 +12,8 @@ class ViewController: UIViewController, URLSessionDelegate, UITableViewDelegate,
     @IBOutlet weak var recipeSearchBar: UISearchBar!
     @IBOutlet weak var RecipeTable: UITableView!
     var results:RecipeMatches = RecipeMatches()
+    var recipe_key = String()
+    var url_query:IngredientBundle = IngredientBundle()
     
     lazy var session: URLSession = {
         let configuration = URLSessionConfiguration.default
@@ -22,7 +24,20 @@ class ViewController: UIViewController, URLSessionDelegate, UITableViewDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpSearchBar()
-        getRecipeSearchResults(with: "apple");
+        print(url_query)
+        if(url_query.search != "" && url_query.url_query != ""){
+            print(url_query.search)
+            print(url_query.url_query)
+            getRecipeSearchResults(with: url_query.search, query: url_query.url_query)
+        }
+
+
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var detailsController = segue.destination as! DetailsViewController
+        detailsController.recipe_key = recipe_key	
     }
     
     
@@ -34,13 +49,14 @@ class ViewController: UIViewController, URLSessionDelegate, UITableViewDelegate,
     
     //Proceed to details view when an item is clicked
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        recipe_key = results.searchResults[indexPath.row].id!
         self.performSegue(withIdentifier: "details", sender: results.searchResults[indexPath.row].id)
 
     }
     
     //Search recipes with query when submitted
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        getRecipeSearchResults(with: searchBar.text!)
+        getRecipeSearchResults(with: searchBar.text!, query: "")
 
     }
     
@@ -59,12 +75,16 @@ class ViewController: UIViewController, URLSessionDelegate, UITableViewDelegate,
     }
     
     
-    func getRecipeSearchResults(with searchPhrase: String) {
+    func getRecipeSearchResults(with searchPhrase: String, query:String) {
         
-        //Format query to call API
+
         let formattedSearchPhrase = searchPhrase.replacingOccurrences(of: " ", with: "+")
         
-        let searchUrl = "https://api.yummly.com/v1/api/recipes?_app_id=\(Constants.APP_ID)&_app_key=\(Constants.APP_KEY)&q=\(formattedSearchPhrase)&requirePictures=true&maxResult=30"
+        var searchUrl = "https://api.yummly.com/v1/api/recipes?_app_id=\(Constants.APP_ID)&_app_key=\(Constants.APP_KEY)&q=\(formattedSearchPhrase)&requirePictures=true&maxResult=30"
+        
+        if query != "" {
+            searchUrl.append(query)
+        }
         
         guard let request = URL(string: searchUrl) else { return }
         
